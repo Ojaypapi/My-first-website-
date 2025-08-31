@@ -21,6 +21,7 @@
   <meta name="twitter:description" content="Modern nail designs by Kelvin. Book your nails today!">
   <meta name="twitter:image" content="images/nail1.jpg">
 
+  <!-- ✅ External CSS -->
   <link rel="stylesheet" href="style.css">
 
   <!-- ✅ Lightbox CSS -->
@@ -74,7 +75,71 @@
     <section id="contact" class="card">
       <h2>Contact</h2>
       <p>Book your appointment today!</p>
-      <a href="tel:+2349039599507">
-        <button id="bookBtn">Book Now</button>
-      </a>
+
+      <!-- ✅ Single Book Now Button -->
+      <button id="bookBtn">Book Now</button>
+
+      <!-- ✅ Popup -->
+      <div id="contactPopup" class="popup">
+        <div class="popup-content">
+          <h3>Choose an option</h3>
+          <a href="tel:+2349039599507" class="popup-btn">📞 Call</a>
+          <a href="https://wa.me/2349039599507?text=Hello%20Kelvin,%20I%20would%20like%20to%20book%20a%20nail%20appointment" class="popup-btn">💬 WhatsApp</a>
+          <button id="closePopup" class="close-btn">❌ Close</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Kelvin's Nail Studio. All Rights Reserved.</p>
+  </footer>
+
+  <!-- ✅ Lightbox JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+
+  <!-- ✅ Popup JS -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      console.log("✅ Kelvin's Nail Studio Website Loaded Successfully");
+
+      const bookBtn = document.getElementById("bookBtn");
+      const popup = document.getElementById("contactPopup");
+      const closePopup = document.getElementById("closePopup");
+
+      if (bookBtn) {
+        bookBtn.addEventListener("click", () => {
+          popup.style.display = "flex"; // Show popup
+        });
+      }
+
+      if (closePopup) {
+        closePopup.addEventListener("click", () => {
+          popup.style.display = "none"; // Hide popup
+        });
+      }
+
+      // Close popup if user clicks outside content
+      window.addEventListener("click", (e) => {
+        if (e.target === popup) {
+          popup.style.display = "none";
+        }
+      });
+    });
+  </script>
+
+  <!-- ✅ Tawk.to Live Chat -->
+  <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+      var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+      s1.async=true;
+      s1.src='https://embed.tawk.to/68b0d5673b4f191924577dd9/1j3pc394t';
+      s1.charset='UTF-8';
+      s1.setAttribute('crossorigin','*');
+      s0.parentNode.insertBefore(s1,s0);
+    })();
+  </script>
+</body>
+</html>
 
