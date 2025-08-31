@@ -1,97 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Kelvin's Nails Studio | Professional Nail Technician</title>
 
   <meta name="description" content="Kelvin is a Professional nail technician offering stylish and modern nail designs. Book your appointment today!">
-<meta name="keywords" content="Nail Technician, Nail Art, Manicure, Pedicure, Nail Salon">
-<meta name="author" content="Kelvin Dale Adehi">
+  <meta name="keywords" content="Nail Technician, Nail Art, Manicure, Pedicure, Nail Salon">
+  <meta name="author" content="Kelvin Dale Adehi">
 
-<meta property="og:title"
-content="Kelvin's Nail Studio">
-<meta property="og:description"
-content="Explore modern nail designs and book your appointment today!">
-<meta property="og:image"
-content="images/nail1.jpg">
-<meta property="og:type"
-content="website"
-<meta property="og:url"
-content="https://kelvinails.com">
+  <meta property="og:title" content="Kelvin's Nail Studio">
+  <meta property="og:description" content="Explore modern nail designs and book your appointment today!">
+  <meta property="og:image" content="images/nail1.jpg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kelvinails.com">
 
-<meta name="twitter:card"
-content="summary_large_image">
-<meta name="twitter:title"
-content="Kelvin's Nail Studio">
-<meta name="twitter:description"
-content="Modern nail designs by Kelvin. Book your nails today!">
-<meta name="twitter:image" content="images/nail1.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Kelvin's Nail Studio">
+  <meta name="twitter:description" content="Modern nail designs by Kelvin. Book your nails today!">
+  <meta name="twitter:image" content="images/nail1.jpg">
 
-<link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- ✅ Lightbox CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
 </head>
 <body>
-<header>
-<h1>Kelvin's Nail Studio</h1>
-<p>Professional Nail Technician|Stylish Designs</p>
-</header>
+  <header>
+    <h1>Kelvin's Nail Studio</h1>
+    <p>Professional Nail Technician | Stylish Designs</p>
+  </header>
 
-<nav>
-<a href="#about">About</a>
-<a href="#services">Services</a>
-<a href="#gallery">Gallery</a>
-<a href="#contact">Contact</a>
-</nav>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-<main>
-<section id="about" class="card">
-<h2>About Me</h2>
-<p>Hello! i'm Kelvin, a Professional nail technician passionate about creating unique,stylish, and modern nail designs that bring confidence and beauty to my clients.</p>
-</section>
+  <main>
+    <section id="about" class="card">
+      <h2>About Me</h2>
+      <p>Hello! I'm Kelvin, a professional nail technician passionate about creating unique, stylish, and modern nail designs that bring confidence and beauty to my clients.</p>
+    </section>
 
-<section id="services" class="card">
-<h2>Services</h2>
-<ul>
-<li>&#x1F485; Manicure and Pedicure</li>
-<li>&#10024; Nail Art and Custom Designs</li>
-<li>&#x1F48E; Gel And Acrylic Nails</li>
-<li>&#x1F9D6; Spa Nail Treatments</li>
-</ul>
-</section>
+    <section id="services" class="card">
+      <h2>Services</h2>
+      <ul>
+        <li>&#x1F485; Manicure and Pedicure</li>
+        <li>&#10024; Nail Art and Custom Designs</li>
+        <li>&#x1F48E; Gel And Acrylic Nails</li>
+        <li>&#x1F9D6; Spa Nail Treatments</li>
+      </ul>
+    </section>
 
-<section id="gallery" class="card">
-<h2>Gallery</h2>
-<p>Check out some of my lastest nail designs:</p>
-<img src="images/nail1.jpg" alt="Nail Design 1" class="gallery-img">
-<img src="images/nail2.jpg" alt="Nail Design 2" class="gallery-img">
-<img src="images/nail3.jpg" alt="Nail Design 3" class="gallery-img">
-</section>
+    <section id="gallery" class="card">
+      <h2>Gallery</h2>
+      <p>Check out some of my latest nail designs:</p>
 
-<section id="contact" class="card">
-<h2>Contact</h2>
-<p>Book your appointment today!</p>
-  <a href="tel:+2349039599507">
-<button id="bookBtn">Book Now</button>
-</section>
-</main>
+      <!-- ✅ Fullscreen Lightbox Gallery -->
+      <a href="images/nail1.jpg" data-lightbox="nails" data-title="Nail Design 1">
+        <img src="images/nail1.jpg" alt="Nail Design 1" class="gallery-img">
+      </a>
+      <a href="images/nail2.jpg" data-lightbox="nails" data-title="Nail Design 2">
+        <img src="images/nail2.jpg" alt="Nail Design 2" class="gallery-img">
+      </a>
+      <a href="images/nail3.jpg" data-lightbox="nails" data-title="Nail Design 3">
+        <img src="images/nail3.jpg" alt="Nail Design 3" class="gallery-img">
+      </a>
+    </section>
 
-<footer>
-<p>&copy; 2025 Kelvin's Nail Studio. All Rights Reserved.</p>
-</footer>
+    <section id="contact" class="card">
+      <h2>Contact</h2>
+      <p>Book your appointment today!</p>
+      <a href="tel:+2349039599507">
+        <button id="bookBtn">Book Now</button>
+      </a>
+    </section>
+  </main>
 
-<script src="script.js"></script>
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/68b0d5673b4f191924577dd9/1j3pc394t';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
+  <footer>
+    <p>&copy; 2025 Kelvin's Nail Studio. All Rights Reserved.</p>
+  </footer>
+
+  <!-- ✅ Lightbox JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+
+  <!-- Tawk.to Live Chat -->
+  <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+      var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+      s1.async=true;
+      s1.src='https://embed.tawk.to/68b0d5673b4f191924577dd9/1j3pc394t';
+      s1.charset='UTF-8';
+      s1.setAttribute('crossorigin','*');
+      s0.parentNode.insertBefore(s1,s0);
+    })();
+  </script>
 </body>
 </html>
 
