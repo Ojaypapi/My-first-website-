@@ -1,105 +1,192 @@
-
+/* ✅ General Reset */
 body {
-  font-family: Arial, sans-Serif;
   margin: 0;
-  padding: 0;
-  background: #f7f7f7;
+  font-family: Arial, sans-serif;
+  background: #f9f9f9;
   color: #333;
 }
 
+/* ✅ Header */
 header {
-  background: #ff4081;
-  color: #fff;
+  text-align: center;
   padding: 20px;
-  text-align: center;
+  background: #ff4081;
+  color: white;
+}
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+header p {
+  margin: 5px 0 0;
 }
 
+/* ✅ Navigation */
 nav {
-  background: #333;
-  padding: 10px;
   text-align: center;
+  background: #333;
+  padding: 10px 0;
 }
-
 nav a {
   color: white;
-  margin: 0 15px;
   text-decoration: none;
-  font-weight: bold; /* fixed typo: font-weoght */
+  margin: 0 15px;
+  font-weight: bold;
+  transition: color 0.3s;
 }
-
 nav a:hover {
   color: #ff4081;
 }
 
-main {
-  padding: 40px;
-  max-width: 900px;
-  margin: auto;
-}
-
+/* ✅ Card Sections */
 .card {
   background: white;
+  margin: 20px auto;
   padding: 20px;
-  margin-bottom: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  border-radius: 12px;
+  max-width: 800px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-.gallery-img {
-  width: 150px;
-  margin: 5px;
-  border-radius: 8px;
-  transition: transform 0.3s ease;
-  cursor: pointer; /* make it look clickable */
-}
-
-.gallery-img:hover {
-  transform: scale(1.1);
-}
-
-footer {
-  background: #222;
-  color: #ccc;
-  text-align: center;
-  padding: 20px;
-  margin-top: 40px;
-}
-
-button {
-  background: #ff4081;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 25px;
+/* ✅ Buttons */
+button, .popup-btn {
   cursor: pointer;
+  font-family: inherit;
   font-size: 16px;
 }
 
-button:hover {
+/* ✅ Book Now Button */
+#bookBtn {
+  background: #ff4081;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  transition: background 0.3s;
+}
+#bookBtn:hover {
   background: #e73370;
 }
 
-/* 🔥 Fullscreen image overlay */
-#imgOverlay {
+/* ✅ Popup Styling */
+.popup {
   display: none;
   position: fixed;
-  z-index: 9999;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.9);
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+}
+
+.popup-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  width: 280px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transform: scale(0.8);
+  opacity: 0;
+  animation: zoomIn 0.3s forwards;
+}
+
+.popup h3 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.popup-btn {
+  display: block;
+  margin: 10px 0;
+  padding: 10px;
+  background: #ff4081;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+.popup-btn:hover {
+  background: #e73370;
+}
+
+.close-btn {
+  margin-top: 10px;
+  background: #444;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.close-btn:hover {
+  background: #222;
+}
+
+/* ✅ Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* ✅ Gallery Styling */
+#gallery {
   text-align: center;
 }
-
-#imgOverlay img {
-  max-width: 90%;
-  max-height: 90%;
-  margin-top: 5%;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+.gallery-img {
+  width: 180px;
+  height: auto;
+  margin: 10px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+.gallery-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
 }
 
-#imgOverlay:target {
-  display: block;
+/* ✅ Lightbox Override (custom look) */
+.lightbox .lb-image {
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+}
+.lightboxOverlay {
+  background: rgba(0,0,0,0.85) !important;
+}
+
+/* ✅ Lightbox Navigation Arrows (Pink Theme) */
+.lb-nav a.lb-prev,
+.lb-nav a.lb-next {
+  opacity: 1 !important;
+  text-shadow: none !important;
+}
+.lb-nav a.lb-prev {
+  background: rgba(255,64,129,0.8) url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="30" height="50" fill="white"><polygon points="25,0 0,25 25,50"/></svg>') no-repeat center center;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  left: 20px;
+}
+.lb-nav a.lb-next {
+  background: rgba(255,64,129,0.8) url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="30" height="50" fill="white"><polygon points="5,0 30,25 5,50"/></svg>') no-repeat center center;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  right: 20px;
+}
+.lb-nav a.lb-prev:hover,
+.lb-nav a.lb-next:hover {
+  background-color: rgba(231,51,112,0.9);
 }
